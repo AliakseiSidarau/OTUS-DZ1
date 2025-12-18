@@ -63,8 +63,8 @@
     <Compile Include="Assets/Scripts/Level/LevelBounds.cs" />
     <Compile Include="Assets/Scripts/Enemy/EnemyPool.cs" />
     <Compile Include="Assets/Scripts/Bullets/BulletConfig.cs" />
+    <Compile Include="Assets/Scripts/Character/CharacterLiveCycle.cs" />
     <Compile Include="Assets/Scripts/Bullets/BulletSystem.cs" />
-    <Compile Include="Assets/Scripts/Input/CharacterState.cs" />
     <Compile Include="Assets/Scripts/Common/PhysicsLayer.cs" />
     <Compile Include="Assets/Scripts/Common/Weapon.cs" />
     <Compile Include="Assets/Scripts/Enemy/Agents/Health.cs" />

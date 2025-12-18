@@ -1,10 +1,12 @@
 using UnityEngine;
+using UnityEngine.Serialization;
 
 namespace ShootEmUp
 {
     public class PlayerAttack: MonoBehaviour
     {
         [SerializeField] private GameObject character;
+        [SerializeField] private Weapon _weapon;
         [SerializeField] private BulletSystem _bulletSystem;
         [SerializeField] private BulletConfig _bulletConfig;
         public bool _fireRequired;
@@ -20,15 +22,14 @@ namespace ShootEmUp
         
         private void OnFlyBullet()
         {
-            var weapon = character.GetComponent<WeaponComponent>();
             _bulletSystem.FlyBulletByArgs(new BulletSystem.Args
             {
                 isPlayer = true,
                 physicsLayer = (int) this._bulletConfig.physicsLayer,
                 color = _bulletConfig.color,
                 damage = _bulletConfig.damage,
-                position = weapon.Position,
-                velocity = weapon.Rotation * Vector3.up * _bulletConfig.speed
+                position = _weapon.Position,
+                velocity = _weapon.Rotation * Vector3.up * _bulletConfig.speed
             });
         }
     }

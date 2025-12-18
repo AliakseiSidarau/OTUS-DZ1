@@ -3,16 +3,14 @@ using UnityEngine;
 
 namespace ShootEmUp
 {
-    public sealed class HitPointsComponent : MonoBehaviour
+    public class Health: MonoBehaviour, IHealth
     {
-        public event Action<GameObject> hpEmpty;
-        
         [SerializeField] private int hitPoints;
+        public event Action<GameObject> hpEmpty;
         
         public bool IsHitPointsExists() {
             return this.hitPoints > 0;
         }
-
         public void TakeDamage(int damage)
         {
             this.hitPoints -= damage;

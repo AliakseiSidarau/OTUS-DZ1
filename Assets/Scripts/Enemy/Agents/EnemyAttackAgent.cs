@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Serialization;
 
 namespace ShootEmUp
 {
@@ -8,7 +9,7 @@ namespace ShootEmUp
 
         public event FireHandler OnFire;
 
-        [SerializeField] private WeaponComponent weaponComponent;
+        [SerializeField] private Weapon _weapon;
         [SerializeField] private EnemyMoveAgent moveAgent;
         [SerializeField] private float countdown;
 
@@ -32,7 +33,7 @@ namespace ShootEmUp
                 return;
             }
             
-            if (!this.target.GetComponent<HitPointsComponent>().IsHitPointsExists())
+            if (!this.target.GetComponent<IHealth>().IsHitPointsExists())
             {
                 return;
             }
@@ -47,7 +48,7 @@ namespace ShootEmUp
 
         private void Fire()
         {
-            var startPosition = this.weaponComponent.Position;
+            var startPosition = this._weapon.Position;
             var vector = (Vector2) this.target.transform.position - startPosition;
             var direction = vector.normalized;
             this.OnFire?.Invoke(this.gameObject, startPosition, direction);

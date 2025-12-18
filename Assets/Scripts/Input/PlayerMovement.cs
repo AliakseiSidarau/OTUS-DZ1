@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace ShootEmUp
@@ -7,10 +8,12 @@ namespace ShootEmUp
         public float HorizontalDirection { get; private set; }
 
         [SerializeField]
-        private GameObject character;
+        private Rigidbody2D _characterRB;
+
+        [SerializeField] private float _speed;
         
         [SerializeField] private PlayerAttack _playerAttack;
-
+        
         private void Update()
         {
             if (Input.GetKeyDown(KeyCode.Space))
@@ -32,9 +35,15 @@ namespace ShootEmUp
             }
         }
         
+        void MoveByRigidbodyVelocity(Vector2 vector)
+        {
+            var nextPosition = _characterRB.position + vector * _speed;
+            _characterRB.MovePosition(nextPosition);
+        }
+        
         private void FixedUpdate()
         {
-            character.GetComponent<MoveComponent>().MoveByRigidbodyVelocity(new Vector2(this.HorizontalDirection, 0) * Time.fixedDeltaTime);
+            MoveByRigidbodyVelocity(new Vector2(HorizontalDirection, 0) * Time.fixedDeltaTime);
         }
     }
 }

@@ -2,16 +2,16 @@ using UnityEngine;
 
 namespace ShootEmUp
 {
-    public sealed class WeaponComponent : MonoBehaviour
+    public sealed class Weapon : MonoBehaviour
     {
         public Vector2 Position
         {
-            get { return this.firePoint.position; }
+            get { return firePoint.position; }
         }
 
         public Quaternion Rotation
         {
-            get { return this.firePoint.rotation; }
+            get { return firePoint.rotation; }
         }
 
         [SerializeField]

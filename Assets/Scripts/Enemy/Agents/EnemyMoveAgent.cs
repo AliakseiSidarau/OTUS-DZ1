@@ -9,7 +9,8 @@ namespace ShootEmUp
             get { return this.isReached; }
         }
 
-        [SerializeField] private MoveComponent moveComponent;
+        [SerializeField] private Rigidbody2D _enemyRB;
+        [SerializeField] private float _enemySpeed;
 
         private Vector2 destination;
 
@@ -19,6 +20,12 @@ namespace ShootEmUp
         {
             this.destination = endPoint;
             this.isReached = false;
+        }
+        
+        void MoveByRigidbodyVelocity(Vector2 vector)
+        {
+            var nextPosition = _enemyRB.position + vector * _enemySpeed;
+            _enemyRB.MovePosition(nextPosition);
         }
 
         private void FixedUpdate()
@@ -36,7 +43,7 @@ namespace ShootEmUp
             }
 
             var direction = vector.normalized * Time.fixedDeltaTime;
-            this.moveComponent.MoveByRigidbodyVelocity(direction);
+            MoveByRigidbodyVelocity(direction);
         }
     }
 }

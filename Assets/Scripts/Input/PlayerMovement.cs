@@ -5,6 +5,8 @@ namespace ShootEmUp
 {
     public sealed class PlayerMovement : MonoBehaviour
     {
+        public event Action<float> OnPlayerDirectionChanged;
+        public event Action<bool> OnPlayerFirePressed;
         public float HorizontalDirection { get; private set; }
 
         [SerializeField]
@@ -15,6 +17,11 @@ namespace ShootEmUp
         [SerializeField] private PlayerAttack _playerAttack;
         
         private void Update()
+        {
+            HandleKeyboard();
+        }
+
+        void HandleKeyboard()
         {
             if (Input.GetKeyDown(KeyCode.Space))
             {
@@ -33,6 +40,16 @@ namespace ShootEmUp
             {
                 HorizontalDirection = 0;
             }
+        }
+
+        void MovePlayer(float direction)
+        {
+            OnPlayerDirectionChanged?.Invoke(direction);
+        }
+
+        void AttackPressPlayer(bool press)
+        {
+            OnPlayerFirePressed?.Invoke(press);
         }
         
         void MoveByRigidbodyVelocity(Vector2 vector)

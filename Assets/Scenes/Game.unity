@@ -355,8 +355,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f88c0455a9984f1f84275727b2160427, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ShootEmUp.CharacterState
-  gameManager: {fileID: 1512507248}
-  character: {fileID: 4414282821800802397}
+  _gameManager: {fileID: 1512507248}
+  _character: {fileID: 4414282821800802397}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -1463,7 +1463,11 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 809540891661548873, guid: 9699e7e809fd44b2bbf3d30c951ecbd2,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 4414282821800802407}
   m_SourcePrefab: {fileID: 100100000, guid: 9699e7e809fd44b2bbf3d30c951ecbd2, type: 3}
 --- !u!1 &3951702117947426121
 GameObject:
@@ -1594,6 +1598,19 @@ Rigidbody2D:
     type: 3}
   m_PrefabInstance: {fileID: 3926786964592264468}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &4414282821800802407
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4414282821800802397}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45d2482bd1164ca28ca495fe328e2183, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ShootEmUp.CharacterHealth
+  hitPoints: 5
 --- !u!1 &4788406047096451828
 GameObject:
   m_ObjectHideFlags: 0

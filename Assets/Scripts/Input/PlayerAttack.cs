@@ -9,15 +9,10 @@ namespace ShootEmUp
         [SerializeField] private Weapon _weapon;
         [SerializeField] private BulletSystem _bulletSystem;
         [SerializeField] private BulletConfig _bulletConfig;
-        public bool _fireRequired;
         
-        private void FixedUpdate()
+        public void Attack()
         {
-            if (_fireRequired)
-            {
-                OnFlyBullet();
-                _fireRequired = false;
-            }
+            OnFlyBullet();
         }
         
         private void OnFlyBullet()

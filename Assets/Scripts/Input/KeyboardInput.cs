@@ -1,6 +1,5 @@
 using System;
 using UnityEngine;
-using UnityEngine.UI;
 
 namespace ShootEmUp
 {
@@ -9,24 +8,18 @@ namespace ShootEmUp
         [SerializeField] private PlayerAttack _playerAttack;
         
         public event Action<Vector2> OnPlayerDirectionChanged;
-        public event Action<bool> OnPlayerFirePressed;
         public Vector2 Direction { get; private set; }
         
         void MovePlayer(Vector2 dir)
         {
             OnPlayerDirectionChanged?.Invoke(dir);
         }
-
-        void AttackPressPlayer(bool press)
-        {
-            OnPlayerFirePressed?.Invoke(press);
-        }
         
         void HandleKeyboard()
         {
             if (Input.GetKeyDown(KeyCode.Space))
             {
-                _playerAttack._fireRequired = true;
+                _playerAttack.Attack();
             }
 
             if (Input.GetKey(KeyCode.LeftArrow))

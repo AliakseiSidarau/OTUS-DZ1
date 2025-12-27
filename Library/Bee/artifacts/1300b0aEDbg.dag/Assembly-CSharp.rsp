@@ -452,8 +452,9 @@
 "Assets/Scripts/Enemy/EnemyPool.cs"
 "Assets/Scripts/Enemy/EnemyPositions.cs"
 "Assets/Scripts/GameManager/GameManager.cs"
+"Assets/Scripts/Input/KeyboardInput.cs"
 "Assets/Scripts/Input/PlayerAttack.cs"
-"Assets/Scripts/Input/PlayerMovement.cs"
+"Assets/Scripts/Input/PlayerMovementController.cs"
 "Assets/Scripts/Level/LevelBackground.cs"
 "Assets/Scripts/Level/LevelBounds.cs"
 -langversion:9.0

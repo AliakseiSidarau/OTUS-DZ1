@@ -3,12 +3,12 @@ using UnityEngine;
 
 namespace ShootEmUp
 {
-    public sealed class PlayerMovementController : MonoBehaviour
+    public sealed class PlayerMovementController : MonoBehaviour, IGameListenerStart
     {
         [SerializeField] private Character _character;
         [SerializeField] private KeyboardInput _input;
 
-        private void OnEnable()
+        public void StartGame()
         {
             _input.OnPlayerDirectionChanged += OnInputChanged;
         }

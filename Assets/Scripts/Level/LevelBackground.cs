@@ -16,9 +16,13 @@ namespace ShootEmUp
         private float positionZ;
 
         private Transform myTransform;
+        
+        
 
         [SerializeField]
         private Params m_params;
+
+        [SerializeField] private GameCycle _gameCycle;
 
         private void Awake()
         {
@@ -32,6 +36,37 @@ namespace ShootEmUp
         }
 
         private void FixedUpdate()
+        {
+            if (_gameCycle.currentGameStatus == GameCycle.GameStatus.start)
+            {
+                MoveBackground();
+            }
+        }
+
+        [Serializable]
+        public sealed class Params
+        {
+            [SerializeField]
+            public float m_startPositionY;
+
+            [SerializeField]
+            public float m_endPositionY;
+
+            [SerializeField]
+            public float m_movingSpeedY;
+        }
+
+        public void StartGame()
+        {
+            // _gameCycle.OnGameStarted += GameStatusChecker;
+        }
+
+        public void OnDisable()
+        {
+            // _gameCycle.OnGameStarted -= GameStatusChecker;
+        }
+
+        private void MoveBackground()
         {
             if (this.myTransform.position.y <= this.endPositionY)
             {
@@ -49,17 +84,10 @@ namespace ShootEmUp
             );
         }
 
-        [Serializable]
-        public sealed class Params
-        {
-            [SerializeField]
-            public float m_startPositionY;
-
-            [SerializeField]
-            public float m_endPositionY;
-
-            [SerializeField]
-            public float m_movingSpeedY;
-        }
+        // private void GameStatusChecker()
+        // {
+        //     _isGameStarted = true;
+        //     Debug.Log($"Game Started is {_isGameStarted}");
+        // }
     }
 }

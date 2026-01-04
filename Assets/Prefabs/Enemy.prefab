@@ -201,6 +201,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _enemyRB: {fileID: 659620479434099170}
   _enemySpeed: 5
+  _gameCycle: {fileID: 0}
 --- !u!114 &6896809305229427933
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -228,7 +229,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 14c741b967ae424aa4637ad5225cbf90, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ShootEmUp.EnemyHealth
-  hitPoints: 10
+  hitPoints: 3
 --- !u!1 &2239154907127902911
 GameObject:
   m_ObjectHideFlags: 0

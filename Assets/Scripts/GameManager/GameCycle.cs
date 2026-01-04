@@ -1,23 +1,41 @@
+using System;
+using System.Collections.Generic;
 using UnityEngine;
-using Button = UnityEngine.UI.Button;
 
 namespace ShootEmUp
 {
     public class GameCycle: MonoBehaviour
     {
-        [SerializeField] private PlayerMovementController _playerMovementController;
-        [SerializeField] private Button _startButton;
-        
-        private string _startText = "START";
-        private string _pauseText = "PAUSE";
+        private List<IGameListenerStart> _gameListenersStarts = new List<IGameListenerStart>();
+        public Action OnGameStarted;
+        public GameStatus currentGameStatus;
 
-        void Start()
+        public enum GameStatus
         {
-            _startButton.onClick.AddListener(StartGame);
+            start = 0,
+            pause = 1,
+            stop = 2
         }
-        private void StartGame()
+
+        void Awake()
         {
-            _playerMovementController.StartGame();
+            currentGameStatus = GameStatus.pause;
+        }
+        public void StartGame()
+        {
+           Debug.Log("Start Game!");
+           foreach (var listener in _gameListenersStarts)
+           {
+               listener.StartGame();
+           }
+
+           currentGameStatus = GameStatus.start;
+           OnGameStarted?.Invoke();
+        }
+
+        public void AddStartListener(IGameListenerStart gameListenerStart)
+        {
+            _gameListenersStarts.Add(gameListenerStart);
         }
     }
 }

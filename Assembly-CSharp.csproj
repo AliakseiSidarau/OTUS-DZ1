@@ -48,7 +48,9 @@
   <ItemGroup>
     <Compile Include="Assets/Scripts/GameManager/GameManager.cs" />
     <Compile Include="Assets/Scripts/Bullets/BulletUtils.cs" />
+    <Compile Include="Assets/Scripts/GameManager/HUDController.cs" />
     <Compile Include="Assets/Scripts/Level/LevelBackground.cs" />
+    <Compile Include="Assets/Scripts/GameManager/GameInstaller.cs" />
     <Compile Include="Assets/Scripts/GameManager/GameCycle.cs" />
     <Compile Include="Assets/Scripts/Character/CharacterHealth.cs" />
     <Compile Include="Assets/Scripts/Input/PlayerMovementController.cs" />

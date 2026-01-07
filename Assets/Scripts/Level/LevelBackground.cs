@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace ShootEmUp
 {
-    public sealed class LevelBackground : MonoBehaviour
+    public sealed class LevelBackground : MonoBehaviour, IGameListenerStart
     {
         private float startPositionY;
 
@@ -23,6 +23,7 @@ namespace ShootEmUp
         private Params m_params;
 
         [SerializeField] private GameCycle _gameCycle;
+        private bool _isGameStarted;
 
         private void Awake()
         {
@@ -37,7 +38,7 @@ namespace ShootEmUp
 
         private void FixedUpdate()
         {
-            if (_gameCycle.currentGameStatus == GameCycle.GameStatus.start)
+            if (_isGameStarted)
             {
                 MoveBackground();
             }
@@ -58,7 +59,7 @@ namespace ShootEmUp
 
         public void StartGame()
         {
-            // _gameCycle.OnGameStarted += GameStatusChecker;
+            _gameCycle.OnGameStarted += GameStatusChecker;
         }
 
         public void OnDisable()
@@ -84,10 +85,13 @@ namespace ShootEmUp
             );
         }
 
-        // private void GameStatusChecker()
-        // {
-        //     _isGameStarted = true;
-        //     Debug.Log($"Game Started is {_isGameStarted}");
-        // }
+        private void GameStatusChecker()
+        {
+            if (_gameCycle.currentGameStatus == GameCycle.GameStatus.start)
+            {
+                _isGameStarted = true;
+                Debug.Log($"Game Started is {_isGameStarted}");
+            }
+        }
     }
 }

@@ -1160,6 +1160,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ShootEmUp.GameInstaller
   _gameCycle: {fileID: 1645476523}
   _playerMovementController: {fileID: 1974373339}
+  _levelBackground: {fileID: 4852396043583267082}
   _enemyManager: {fileID: 562298205}
 --- !u!1 &1549378006
 GameObject:

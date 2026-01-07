@@ -60,6 +60,7 @@
     <Compile Include="Assets/Scripts/Input/KeyboardInput.cs" />
     <Compile Include="Assets/Scripts/Enemy/EnemyPositions.cs" />
     <Compile Include="Assets/Scripts/Enemy/Agents/IHealth.cs" />
+    <Compile Include="Assets/Scripts/GameManager/IGameListenerFinish.cs" />
     <Compile Include="Assets/Scripts/Components/TeamComponent.cs" />
     <Compile Include="Assets/Scripts/Character/Character.cs" />
     <Compile Include="Assets/Scripts/Bullets/Bullet.cs" />

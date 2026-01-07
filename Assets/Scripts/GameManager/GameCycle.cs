@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using NUnit.Framework;
 using UnityEngine;
 
 namespace ShootEmUp
@@ -7,6 +8,7 @@ namespace ShootEmUp
     public class GameCycle: MonoBehaviour
     {
         private List<IGameListenerStart> _gameListenersStarts = new List<IGameListenerStart>();
+        private List<IGameListenerFinish> _gameListenerFinishes = new List<IGameListenerFinish>();
         public Action OnGameStarted;
         public GameStatus currentGameStatus;
 
@@ -33,9 +35,23 @@ namespace ShootEmUp
            OnGameStarted?.Invoke();
         }
 
+        public void FinishGame()
+        {
+            Debug.Log("Finish Game!");
+            foreach (var listener in _gameListenerFinishes)
+            {
+                listener.FinishGame();
+            }
+        }
+
         public void AddStartListener(IGameListenerStart gameListenerStart)
         {
             _gameListenersStarts.Add(gameListenerStart);
+        }
+        
+        public void AddFinishListener(IGameListenerFinish gameListenerFinish)
+        {
+            _gameListenerFinishes.Add(gameListenerFinish);
         }
     }
 }

@@ -1,4 +1,3 @@
-using System;
 using UnityEngine;
 
 namespace ShootEmUp
@@ -11,10 +10,8 @@ namespace ShootEmUp
 
         private void Awake()
         {
-            _gameCycle.AddStartListener(_playerMovementController);
-            _gameCycle.AddStartListener(_levelBackground);
-            _gameCycle.AddFinishListener(_playerMovementController);
-            _gameCycle.AddFinishListener(_levelBackground);
+            _gameCycle.AddListener(_playerMovementController);
+            _gameCycle.AddListener(_levelBackground);
         }
     }
 }

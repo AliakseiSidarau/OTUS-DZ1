@@ -1,6 +1,5 @@
 using System;
 using System.Collections.Generic;
-using NUnit.Framework;
 using UnityEngine;
 
 namespace ShootEmUp
@@ -9,8 +8,9 @@ namespace ShootEmUp
     {
         private List<IGameListenerStart> _gameListenersStarts = new List<IGameListenerStart>();
         private List<IGameListenerFinish> _gameListenerFinishes = new List<IGameListenerFinish>();
+        private List<IGameListener> _gameListeners = new List<IGameListener>();
         public Action OnGameStarted;
-        public GameStatus currentGameStatus;
+        public GameStatus currentGameStatus = GameStatus.stop;
 
         public enum GameStatus
         {
@@ -18,43 +18,44 @@ namespace ShootEmUp
             pause = 1,
             stop = 2
         }
-
-        void Awake()
-        {
-            currentGameStatus = GameStatus.pause;
-        }
+        
         public void StartGame()
         {
-           Debug.Log("Start Game!");
-           foreach (var listener in _gameListenersStarts)
-           {
-               listener.StartGame();
-           }
+            if (currentGameStatus != GameStatus.start)
+            {
+                Debug.Log("Start Game!");
+                foreach (var listener in _gameListeners)
+                {
+                    if (listener is IGameListenerStart listenerStart)
+                    {
+                        listenerStart.StartGame();
+                    }
+                }
 
-           currentGameStatus = GameStatus.start;
-           OnGameStarted?.Invoke();
+                currentGameStatus = GameStatus.start;
+                OnGameStarted?.Invoke();
+            }
+            Debug.Log("Game Already started!");
         }
 
         public void FinishGame()
         {
             Debug.Log("Finish Game!");
-            foreach (var listener in _gameListenerFinishes)
+            foreach (var listener in _gameListeners)
             {
-                listener.FinishGame();
+                if (listener is IGameListenerFinish listenerFinish)
+                {
+                    listenerFinish.FinishGame();
+                }
             }
 
             currentGameStatus = GameStatus.stop;
             OnGameStarted?.Invoke();
         }
 
-        public void AddStartListener(IGameListenerStart gameListenerStart)
+        public void AddListener(IGameListener gameListener)
         {
-            _gameListenersStarts.Add(gameListenerStart);
-        }
-        
-        public void AddFinishListener(IGameListenerFinish gameListenerFinish)
-        {
-            _gameListenerFinishes.Add(gameListenerFinish);
+            _gameListeners.Add(gameListener);
         }
     }
 }

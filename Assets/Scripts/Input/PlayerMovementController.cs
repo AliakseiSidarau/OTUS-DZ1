@@ -2,7 +2,7 @@ using UnityEngine;
 
 namespace ShootEmUp
 {
-    public sealed class PlayerMovementController : MonoBehaviour, IGameListenerStart, IGameListenerFinish
+    public sealed class PlayerMovementController : MonoBehaviour, IGameListenerStart, IGameListenerFinish, IGameListenerPause
     {
         [SerializeField] private Character _character;
         [SerializeField] private KeyboardInput _input;
@@ -22,6 +22,11 @@ namespace ShootEmUp
         private void OnInputChanged(Vector2 direction)
         {
             _character.MoveByRigidbodyVelocity(new Vector2(direction.x, 0) * Time.fixedDeltaTime);
+        }
+
+        public void PauseGame()
+        {
+            throw new System.NotImplementedException();
         }
     }
 }

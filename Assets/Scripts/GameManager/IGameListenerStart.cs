@@ -1,6 +1,6 @@
 namespace ShootEmUp
 {
-    public interface IGameListenerStart
+    public interface IGameListenerStart : IGameListener
     {
         void StartGame();
     }

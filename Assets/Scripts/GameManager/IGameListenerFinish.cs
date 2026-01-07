@@ -1,6 +1,6 @@
 namespace ShootEmUp
 {
-    public interface IGameListenerFinish
+    public interface IGameListenerFinish : IGameListener
     {
         void FinishGame();
     }

@@ -14,6 +14,7 @@ namespace ShootEmUp
             _gameCycle.AddStartListener(_playerMovementController);
             _gameCycle.AddStartListener(_levelBackground);
             _gameCycle.AddFinishListener(_playerMovementController);
+            _gameCycle.AddFinishListener(_levelBackground);
         }
     }
 }

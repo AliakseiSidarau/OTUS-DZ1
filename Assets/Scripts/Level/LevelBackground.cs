@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace ShootEmUp
 {
-    public sealed class LevelBackground : MonoBehaviour, IGameListenerStart
+    public sealed class LevelBackground : MonoBehaviour, IGameListenerStart, IGameListenerFinish
     {
         private float startPositionY;
 
@@ -62,11 +62,6 @@ namespace ShootEmUp
             _gameCycle.OnGameStarted += GameStatusChecker;
         }
 
-        public void OnDisable()
-        {
-            // _gameCycle.OnGameStarted -= GameStatusChecker;
-        }
-
         private void MoveBackground()
         {
             if (this.myTransform.position.y <= this.endPositionY)
@@ -92,6 +87,16 @@ namespace ShootEmUp
                 _isGameStarted = true;
                 Debug.Log($"Game Started is {_isGameStarted}");
             }
+            else if(_gameCycle.currentGameStatus == GameCycle.GameStatus.stop)
+            {
+                _isGameStarted = false;
+            }
+        }
+
+        public void FinishGame()
+        {
+            _gameCycle.OnGameStarted -= GameStatusChecker;
+            _isGameStarted = false;
         }
     }
 }

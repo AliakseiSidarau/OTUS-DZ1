@@ -42,6 +42,9 @@ namespace ShootEmUp
             {
                 listener.FinishGame();
             }
+
+            currentGameStatus = GameStatus.stop;
+            OnGameStarted?.Invoke();
         }
 
         public void AddStartListener(IGameListenerStart gameListenerStart)

@@ -52,6 +52,7 @@
     <Compile Include="Assets/Scripts/Level/LevelBackground.cs" />
     <Compile Include="Assets/Scripts/GameManager/IGameListenerPause.cs" />
     <Compile Include="Assets/Scripts/GameManager/GameInstaller.cs" />
+    <Compile Include="Assets/Scripts/GameManager/IGameListenerUpdate.cs" />
     <Compile Include="Assets/Scripts/GameManager/GameCycle.cs" />
     <Compile Include="Assets/Scripts/Character/CharacterHealth.cs" />
     <Compile Include="Assets/Scripts/Input/PlayerMovementController.cs" />

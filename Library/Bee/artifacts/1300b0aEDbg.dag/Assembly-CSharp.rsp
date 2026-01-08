@@ -460,6 +460,7 @@
 "Assets/Scripts/GameManager/IGameListenerPause.cs"
 "Assets/Scripts/GameManager/IGameListenerResume.cs"
 "Assets/Scripts/GameManager/IGameListenerStart.cs"
+"Assets/Scripts/GameManager/IGameListenerUpdate.cs"
 "Assets/Scripts/Input/KeyboardInput.cs"
 "Assets/Scripts/Input/PlayerAttack.cs"
 "Assets/Scripts/Input/PlayerMovementController.cs"

@@ -8,12 +8,14 @@ namespace ShootEmUp
     {
         [SerializeField] private Button _startButton;
         [SerializeField] private Button _finishButton;
+        [SerializeField] private Button _pauseButton;
         [SerializeField] private GameCycle _gameCycle;
 
         private void Awake()
         {
             _startButton.onClick.AddListener(_gameCycle.StartGame);
             _finishButton.onClick.AddListener(_gameCycle.FinishGame);
+            _pauseButton.onClick.AddListener(_gameCycle.PauseGame);
         }
     }
 }

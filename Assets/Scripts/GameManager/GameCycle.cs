@@ -20,7 +20,11 @@ namespace ShootEmUp
 
         private void Update()
         {
-            var deltaTime = Time.deltaTime;
+            var deltaTime = Time.fixedDeltaTime;
+            foreach (var listener in _gameListenersTick)
+            {
+                listener.TickGame(deltaTime);
+            }
         }
 
         public void StartGame()

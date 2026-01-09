@@ -2135,6 +2135,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ShootEmUp.HUDController
   _startButton: {fileID: 269259843}
   _finishButton: {fileID: 1633685226}
+  _pauseButton: {fileID: 795101464}
   _gameCycle: {fileID: 1645476523}
 --- !u!1 &61006797492197339
 GameObject:

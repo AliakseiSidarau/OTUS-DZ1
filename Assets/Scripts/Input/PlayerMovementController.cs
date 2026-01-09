@@ -1,11 +1,15 @@
+using System.Numerics;
 using UnityEngine;
+using Vector2 = UnityEngine.Vector2;
+
 
 namespace ShootEmUp
 {
-    public sealed class PlayerMovementController : MonoBehaviour, IGameListenerStart, IGameListenerFinish, IGameListenerPause
+    public sealed class PlayerMovementController : MonoBehaviour, IGameListenerStart, IGameListenerFinish, IGameListenerPause, IGameListenerUpdate
     {
         [SerializeField] private Character _character;
         [SerializeField] private KeyboardInput _input;
+        private Vector2 _direction;
 
         public void StartGame()
         {
@@ -21,12 +25,18 @@ namespace ShootEmUp
         
         private void OnInputChanged(Vector2 direction)
         {
-            _character.MoveByRigidbodyVelocity(new Vector2(direction.x, 0) * Time.fixedDeltaTime);
+            _direction = new Vector2(direction.x, 0);
         }
 
         public void PauseGame()
         {
             throw new System.NotImplementedException();
+        }
+
+        public void TickGame(float deltaTime)
+        {
+            _direction *= deltaTime;
+            _character.MoveByRigidbodyVelocity(_direction);
         }
     }
 }

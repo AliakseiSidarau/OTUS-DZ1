@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace ShootEmUp
 {
-    public sealed class LevelBackground : MonoBehaviour, IGameListenerStart, IGameListenerFinish
+    public sealed class LevelBackground : MonoBehaviour, IGameListenerStart, IGameListenerFinish, IGameListenerPause, IGameListenerFixedUpdate
     {
         private float startPositionY;
 
@@ -36,14 +36,6 @@ namespace ShootEmUp
             this.positionZ = position.z;
         }
 
-        private void FixedUpdate()
-        {
-            if (_isGameStarted)
-            {
-                MoveBackground();
-            }
-        }
-
         [Serializable]
         public sealed class Params
         {
@@ -61,8 +53,16 @@ namespace ShootEmUp
         {
             _gameCycle.OnGameStarted += GameStatusChecker;
         }
+        
+        public void FixedTickGame(float fixedDeltaTime)
+        {
+            if (_isGameStarted)
+            {
+                MoveBackground(fixedDeltaTime);
+            }
+        }
 
-        private void MoveBackground()
+        private void MoveBackground(float deltaTime)
         {
             if (this.myTransform.position.y <= this.endPositionY)
             {
@@ -75,7 +75,7 @@ namespace ShootEmUp
 
             this.myTransform.position -= new Vector3(
                 this.positionX,
-                this.movingSpeedY * Time.fixedDeltaTime,
+                this.movingSpeedY * deltaTime,
                 this.positionZ
             );
         }
@@ -87,13 +87,19 @@ namespace ShootEmUp
                 _isGameStarted = true;
                 Debug.Log($"Game Started is {_isGameStarted}");
             }
-            else if(_gameCycle.currentGameStatus == GameCycle.GameStatus.stop)
+            else if(_gameCycle.currentGameStatus == GameCycle.GameStatus.finish)
             {
                 _isGameStarted = false;
             }
         }
 
         public void FinishGame()
+        {
+            _gameCycle.OnGameStarted -= GameStatusChecker;
+            _isGameStarted = false;
+        }
+
+        public void PauseGame()
         {
             _gameCycle.OnGameStarted -= GameStatusChecker;
             _isGameStarted = false;

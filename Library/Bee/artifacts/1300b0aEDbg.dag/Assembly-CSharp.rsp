@@ -457,6 +457,7 @@
 "Assets/Scripts/GameManager/HUDController.cs"
 "Assets/Scripts/GameManager/IGameListener.cs"
 "Assets/Scripts/GameManager/IGameListenerFinish.cs"
+"Assets/Scripts/GameManager/IGameListenerFixedUpdate.cs"
 "Assets/Scripts/GameManager/IGameListenerPause.cs"
 "Assets/Scripts/GameManager/IGameListenerResume.cs"
 "Assets/Scripts/GameManager/IGameListenerStart.cs"

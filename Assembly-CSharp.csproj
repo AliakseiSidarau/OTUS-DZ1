@@ -58,6 +58,7 @@
     <Compile Include="Assets/Scripts/Input/PlayerMovementController.cs" />
     <Compile Include="Assets/Scripts/Enemy/EnemyManager.cs" />
     <Compile Include="Assets/Scripts/Enemy/Agents/EnemyMoveAgent.cs" />
+    <Compile Include="Assets/Scripts/GameManager/IGameListenerFixedUpdate.cs" />
     <Compile Include="Assets/Scripts/Input/PlayerAttack.cs" />
     <Compile Include="Assets/Scripts/GameManager/IGameListener.cs" />
     <Compile Include="Assets/Scripts/Input/KeyboardInput.cs" />

@@ -2,12 +2,13 @@ using UnityEngine;
 
 namespace ShootEmUp
 {
-    public sealed class GameManager : MonoBehaviour
+    public sealed class GameManager : MonoBehaviour, IGameListenerFinish
     {
         public void FinishGame()
         {
             Debug.Log("Game over!");
-            Time.timeScale = 0;
+            Application.Quit();
+            // Time.timeScale = 0;
         }
     }
 }

@@ -5,7 +5,7 @@ using Vector2 = UnityEngine.Vector2;
 
 namespace ShootEmUp
 {
-    public sealed class PlayerMovementController : MonoBehaviour, IGameListenerStart, IGameListenerFinish, IGameListenerPause, IGameListenerUpdate
+    public sealed class PlayerMovementController : MonoBehaviour, IGameListenerStart, IGameListenerFinish, IGameListenerPause, IGameListenerFixedUpdate
     {
         [SerializeField] private Character _character;
         [SerializeField] private KeyboardInput _input;
@@ -30,10 +30,10 @@ namespace ShootEmUp
 
         public void PauseGame()
         {
-            throw new System.NotImplementedException();
+            _input.OnPlayerDirectionChanged -= OnInputChanged;
         }
 
-        public void TickGame(float deltaTime)
+        public void FixedTickGame(float deltaTime)
         {
             _direction *= deltaTime;
             _character.MoveByRigidbodyVelocity(_direction);

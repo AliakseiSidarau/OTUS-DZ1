@@ -10,13 +10,28 @@ namespace ShootEmUp
         private List<IGameListenerUpdate> _gameListenersTick = new List<IGameListenerUpdate>();
         private List<IGameListenerFixedUpdate> _gameListenersFixedTick = new List<IGameListenerFixedUpdate>();
         public Action OnGameStarted;
-        public GameStatus currentGameStatus = GameStatus.finish;
+        public GameStatus currentGameStatus = GameStatus.awake;
 
         public enum GameStatus
         {
-            start = 0,
-            pause = 1,
-            finish = 2
+            awake = 0,
+            start = 1,
+            pause = 2,
+            finish = 3
+        }
+
+        private void Awake()
+        {
+            foreach (var listener in _gameListeners)
+            {
+                if (listener is IGameListenerAwake listenerAwake)
+                {
+                    listenerAwake.AwakeGame();
+                }
+                
+                currentGameStatus = GameStatus.start;
+                OnGameStarted?.Invoke();
+            }
         }
 
         private void Update()
@@ -39,7 +54,7 @@ namespace ShootEmUp
 
         public void StartGame()
         {
-            if (currentGameStatus == GameStatus.finish)
+            if (currentGameStatus == GameStatus.start)
             {
                 Debug.Log("Start Game!");
                 foreach (var listener in _gameListeners)
@@ -49,7 +64,6 @@ namespace ShootEmUp
                         listenerStart.StartGame();
                     }
                 }
-                currentGameStatus = GameStatus.start;
                 OnGameStarted?.Invoke();
             }
             Debug.Log("Game Already started or press Pause!");

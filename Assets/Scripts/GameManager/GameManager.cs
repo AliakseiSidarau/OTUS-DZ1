@@ -1,3 +1,4 @@
+using UnityEditor;
 using UnityEngine;
 
 namespace ShootEmUp
@@ -7,8 +8,7 @@ namespace ShootEmUp
         public void FinishGame()
         {
             Debug.Log("Game over!");
-            Application.Quit();
-            // Time.timeScale = 0;
+            EditorApplication.ExitPlaymode();
         }
     }
 }

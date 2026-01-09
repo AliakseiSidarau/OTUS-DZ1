@@ -46,20 +46,22 @@
     <Analyzer Include="/Applications/Unity/Hub/Editor/6000.2.14f1/Unity.app/Contents/Tools/Unity.SourceGenerators/Unity.UIToolkit.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets/Scripts/GameManager/IGameListenerAwake.cs" />
     <Compile Include="Assets/Scripts/GameManager/GameManager.cs" />
     <Compile Include="Assets/Scripts/Bullets/BulletUtils.cs" />
-    <Compile Include="Assets/Scripts/GameManager/HUDController.cs" />
     <Compile Include="Assets/Scripts/Level/LevelBackground.cs" />
     <Compile Include="Assets/Scripts/GameManager/IGameListenerPause.cs" />
     <Compile Include="Assets/Scripts/GameManager/GameInstaller.cs" />
     <Compile Include="Assets/Scripts/GameManager/IGameListenerUpdate.cs" />
     <Compile Include="Assets/Scripts/GameManager/GameCycle.cs" />
     <Compile Include="Assets/Scripts/Character/CharacterHealth.cs" />
+    <Compile Include="Assets/Scripts/Level/CountdownTimerController.cs" />
     <Compile Include="Assets/Scripts/Input/PlayerMovementController.cs" />
     <Compile Include="Assets/Scripts/Enemy/EnemyManager.cs" />
     <Compile Include="Assets/Scripts/Enemy/Agents/EnemyMoveAgent.cs" />
     <Compile Include="Assets/Scripts/GameManager/IGameListenerFixedUpdate.cs" />
     <Compile Include="Assets/Scripts/Input/PlayerAttack.cs" />
+    <Compile Include="Assets/Scripts/Level/HUDController.cs" />
     <Compile Include="Assets/Scripts/GameManager/IGameListener.cs" />
     <Compile Include="Assets/Scripts/Input/KeyboardInput.cs" />
     <Compile Include="Assets/Scripts/Enemy/EnemyPositions.cs" />

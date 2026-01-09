@@ -454,8 +454,8 @@
 "Assets/Scripts/GameManager/GameCycle.cs"
 "Assets/Scripts/GameManager/GameInstaller.cs"
 "Assets/Scripts/GameManager/GameManager.cs"
-"Assets/Scripts/GameManager/HUDController.cs"
 "Assets/Scripts/GameManager/IGameListener.cs"
+"Assets/Scripts/GameManager/IGameListenerAwake.cs"
 "Assets/Scripts/GameManager/IGameListenerFinish.cs"
 "Assets/Scripts/GameManager/IGameListenerFixedUpdate.cs"
 "Assets/Scripts/GameManager/IGameListenerPause.cs"
@@ -465,6 +465,8 @@
 "Assets/Scripts/Input/KeyboardInput.cs"
 "Assets/Scripts/Input/PlayerAttack.cs"
 "Assets/Scripts/Input/PlayerMovementController.cs"
+"Assets/Scripts/Level/CountdownTimerController.cs"
+"Assets/Scripts/Level/HUDController.cs"
 "Assets/Scripts/Level/LevelBackground.cs"
 "Assets/Scripts/Level/LevelBounds.cs"
 -langversion:9.0

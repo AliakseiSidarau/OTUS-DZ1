@@ -25,15 +25,13 @@ namespace ShootEmUp
             _finishButton.onClick.RemoveAllListeners();
             _pauseButton.onClick.RemoveAllListeners();
         }
-
-        public void AwakeGame()
+        public void GameAwake()
         {
-            
+            _startButton.onClick.AddListener(_gameCycle.StartGame);
         }
 
         public void StartGame()
         {
-            _startButton.onClick.AddListener(_gameCycle.StartGame);
             _finishButton.onClick.AddListener(_gameCycle.FinishGame);
             _pauseButton.onClick.AddListener(_gameCycle.PauseGame);
         }

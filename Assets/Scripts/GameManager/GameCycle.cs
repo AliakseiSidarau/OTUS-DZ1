@@ -26,11 +26,8 @@ namespace ShootEmUp
             {
                 if (listener is IGameListenerAwake listenerAwake)
                 {
-                    listenerAwake.AwakeGame();
+                    listenerAwake.GameAwake();
                 }
-                
-                currentGameStatus = GameStatus.start;
-                OnGameStarted?.Invoke();
             }
         }
 
@@ -54,7 +51,7 @@ namespace ShootEmUp
 
         public void StartGame()
         {
-            if (currentGameStatus == GameStatus.start)
+            if (currentGameStatus == GameStatus.awake)
             {
                 Debug.Log("Start Game!");
                 foreach (var listener in _gameListeners)
@@ -64,6 +61,8 @@ namespace ShootEmUp
                         listenerStart.StartGame();
                     }
                 }
+
+                currentGameStatus = GameStatus.start;
                 OnGameStarted?.Invoke();
             }
             Debug.Log("Game Already started or press Pause!");
@@ -128,6 +127,7 @@ namespace ShootEmUp
         public void AddListener(IGameListener gameListener)
         {
             _gameListeners.Add(gameListener);
+            
             if (gameListener is IGameListenerUpdate gameListenerUpdate)
             {
                 _gameListenersTick.Add(gameListenerUpdate);

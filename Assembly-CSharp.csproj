@@ -441,6 +441,21 @@
     <Reference Include="Unity.Analytics.StandardEvents">
       <HintPath>/Users/alexey/Downloads/ShootEmUp (Dirty)/Library/PackageCache/com.unity.analytics@6cc66d58ac08/AnalyticsStandardEvents/Unity.Analytics.StandardEvents.dll</HintPath>
     </Reference>
+    <Reference Include="Zenject.ReflectionBaking.Mono.Cecil.Rocks">
+      <HintPath>/Users/alexey/Downloads/ShootEmUp (Dirty)/Assets/Plugins/Zenject/OptionalExtras/ReflectionBaking/Lib/Zenject.ReflectionBaking.Mono.Cecil.Rocks.dll</HintPath>
+    </Reference>
+    <Reference Include="Zenject.ReflectionBaking.Mono.Cecil.Pdb">
+      <HintPath>/Users/alexey/Downloads/ShootEmUp (Dirty)/Assets/Plugins/Zenject/OptionalExtras/ReflectionBaking/Lib/Zenject.ReflectionBaking.Mono.Cecil.Pdb.dll</HintPath>
+    </Reference>
+    <Reference Include="Zenject-usage">
+      <HintPath>/Users/alexey/Downloads/ShootEmUp (Dirty)/Assets/Plugins/Zenject/Source/Usage/Zenject-usage.dll</HintPath>
+    </Reference>
+    <Reference Include="Zenject.ReflectionBaking.Mono.Cecil">
+      <HintPath>/Users/alexey/Downloads/ShootEmUp (Dirty)/Assets/Plugins/Zenject/OptionalExtras/ReflectionBaking/Lib/Zenject.ReflectionBaking.Mono.Cecil.dll</HintPath>
+    </Reference>
+    <Reference Include="Zenject.ReflectionBaking.Mono.Cecil.Mdb">
+      <HintPath>/Users/alexey/Downloads/ShootEmUp (Dirty)/Assets/Plugins/Zenject/OptionalExtras/ReflectionBaking/Lib/Zenject.ReflectionBaking.Mono.Cecil.Mdb.dll</HintPath>
+    </Reference>
     <Reference Include="UnityEditor.iOS.Extensions.Xcode">
       <HintPath>/Applications/Unity/Hub/Editor/6000.2.14f1/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
     </Reference>
@@ -834,20 +849,62 @@
     <Reference Include="netstandard">
       <HintPath>/Applications/Unity/Hub/Editor/6000.2.14f1/Unity.app/Contents/UnityReferenceAssemblies/unity-4.8-api/Facades/netstandard.dll</HintPath>
     </Reference>
-    <Reference Include="Analytics">
-      <HintPath>/Users/alexey/Downloads/ShootEmUp (Dirty)/Library/ScriptAssemblies/Analytics.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Analytics.DataPrivacy">
-      <HintPath>/Users/alexey/Downloads/ShootEmUp (Dirty)/Library/ScriptAssemblies/Unity.Analytics.DataPrivacy.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.TextMeshPro.Editor">
-      <HintPath>/Users/alexey/Downloads/ShootEmUp (Dirty)/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
-    </Reference>
     <Reference Include="Unity.2D.Sprite.Editor">
       <HintPath>/Users/alexey/Downloads/ShootEmUp (Dirty)/Library/ScriptAssemblies/Unity.2D.Sprite.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro">
       <HintPath>/Users/alexey/Downloads/ShootEmUp (Dirty)/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Services.Core">
+      <HintPath>/Users/alexey/Downloads/ShootEmUp (Dirty)/Library/ScriptAssemblies/Unity.Services.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.AI.Navigation">
+      <HintPath>/Users/alexey/Downloads/ShootEmUp (Dirty)/Library/ScriptAssemblies/Unity.AI.Navigation.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.Purchasing">
+      <HintPath>/Users/alexey/Downloads/ShootEmUp (Dirty)/Library/ScriptAssemblies/UnityEditor.Purchasing.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.AI.Navigation.Updater">
+      <HintPath>/Users/alexey/Downloads/ShootEmUp (Dirty)/Library/ScriptAssemblies/Unity.AI.Navigation.Updater.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Timeline">
+      <HintPath>/Users/alexey/Downloads/ShootEmUp (Dirty)/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.AI.Navigation.Editor">
+      <HintPath>/Users/alexey/Downloads/ShootEmUp (Dirty)/Library/ScriptAssemblies/Unity.AI.Navigation.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.Purchasing.Codeless">
+      <HintPath>/Users/alexey/Downloads/ShootEmUp (Dirty)/Library/ScriptAssemblies/UnityEngine.Purchasing.Codeless.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.PlasticSCM.Editor">
+      <HintPath>/Users/alexey/Downloads/ShootEmUp (Dirty)/Library/ScriptAssemblies/Unity.PlasticSCM.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Services.Core.Components">
+      <HintPath>/Users/alexey/Downloads/ShootEmUp (Dirty)/Library/ScriptAssemblies/Unity.Services.Core.Components.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.Advertisements">
+      <HintPath>/Users/alexey/Downloads/ShootEmUp (Dirty)/Library/ScriptAssemblies/UnityEngine.Advertisements.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.Purchasing.SecurityCore">
+      <HintPath>/Users/alexey/Downloads/ShootEmUp (Dirty)/Library/ScriptAssemblies/UnityEngine.Purchasing.SecurityCore.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Analytics.DataPrivacy">
+      <HintPath>/Users/alexey/Downloads/ShootEmUp (Dirty)/Library/ScriptAssemblies/Unity.Analytics.DataPrivacy.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Rider.Editor">
+      <HintPath>/Users/alexey/Downloads/ShootEmUp (Dirty)/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Services.Core.Analytics">
+      <HintPath>/Users/alexey/Downloads/ShootEmUp (Dirty)/Library/ScriptAssemblies/Unity.Services.Core.Analytics.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.AI.Navigation.Editor.ConversionSystem">
+      <HintPath>/Users/alexey/Downloads/ShootEmUp (Dirty)/Library/ScriptAssemblies/Unity.AI.Navigation.Editor.ConversionSystem.dll</HintPath>
+    </Reference>
+    <Reference Include="Analytics">
+      <HintPath>/Users/alexey/Downloads/ShootEmUp (Dirty)/Library/ScriptAssemblies/Analytics.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.TextMeshPro.Editor">
+      <HintPath>/Users/alexey/Downloads/ShootEmUp (Dirty)/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VisualStudio.Editor">
       <HintPath>/Users/alexey/Downloads/ShootEmUp (Dirty)/Library/ScriptAssemblies/Unity.VisualStudio.Editor.dll</HintPath>
@@ -858,17 +915,8 @@
     <Reference Include="UnityEngine.Purchasing.SecurityStub">
       <HintPath>/Users/alexey/Downloads/ShootEmUp (Dirty)/Library/ScriptAssemblies/UnityEngine.Purchasing.SecurityStub.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.AI.Navigation">
-      <HintPath>/Users/alexey/Downloads/ShootEmUp (Dirty)/Library/ScriptAssemblies/Unity.AI.Navigation.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Services.Core">
-      <HintPath>/Users/alexey/Downloads/ShootEmUp (Dirty)/Library/ScriptAssemblies/Unity.Services.Core.dll</HintPath>
-    </Reference>
     <Reference Include="UnityEngine.Purchasing.Stores">
       <HintPath>/Users/alexey/Downloads/ShootEmUp (Dirty)/Library/ScriptAssemblies/UnityEngine.Purchasing.Stores.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEditor.Purchasing">
-      <HintPath>/Users/alexey/Downloads/ShootEmUp (Dirty)/Library/ScriptAssemblies/UnityEditor.Purchasing.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>/Users/alexey/Downloads/ShootEmUp (Dirty)/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
@@ -885,50 +933,17 @@
     <Reference Include="Unity.Services.Core.Environments">
       <HintPath>/Users/alexey/Downloads/ShootEmUp (Dirty)/Library/ScriptAssemblies/Unity.Services.Core.Environments.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.AI.Navigation.Updater">
-      <HintPath>/Users/alexey/Downloads/ShootEmUp (Dirty)/Library/ScriptAssemblies/Unity.AI.Navigation.Updater.dll</HintPath>
-    </Reference>
     <Reference Include="UnityEngine.Purchasing">
       <HintPath>/Users/alexey/Downloads/ShootEmUp (Dirty)/Library/ScriptAssemblies/UnityEngine.Purchasing.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.AI.Navigation.Editor">
-      <HintPath>/Users/alexey/Downloads/ShootEmUp (Dirty)/Library/ScriptAssemblies/Unity.AI.Navigation.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Timeline">
-      <HintPath>/Users/alexey/Downloads/ShootEmUp (Dirty)/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Multiplayer.Center.Editor">
       <HintPath>/Users/alexey/Downloads/ShootEmUp (Dirty)/Library/ScriptAssemblies/Unity.Multiplayer.Center.Editor.dll</HintPath>
     </Reference>
-    <Reference Include="UnityEngine.Purchasing.Codeless">
-      <HintPath>/Users/alexey/Downloads/ShootEmUp (Dirty)/Library/ScriptAssemblies/UnityEngine.Purchasing.Codeless.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.PlasticSCM.Editor">
-      <HintPath>/Users/alexey/Downloads/ShootEmUp (Dirty)/Library/ScriptAssemblies/Unity.PlasticSCM.Editor.dll</HintPath>
-    </Reference>
     <Reference Include="UnityEngine.Advertisements.Editor">
       <HintPath>/Users/alexey/Downloads/ShootEmUp (Dirty)/Library/ScriptAssemblies/UnityEngine.Advertisements.Editor.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.Services.Core.Components">
-      <HintPath>/Users/alexey/Downloads/ShootEmUp (Dirty)/Library/ScriptAssemblies/Unity.Services.Core.Components.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.Advertisements">
-      <HintPath>/Users/alexey/Downloads/ShootEmUp (Dirty)/Library/ScriptAssemblies/UnityEngine.Advertisements.dll</HintPath>
-    </Reference>
     <Reference Include="Unity.2D.Sprite.AIIntegration.Editor">
       <HintPath>/Users/alexey/Downloads/ShootEmUp (Dirty)/Library/ScriptAssemblies/Unity.2D.Sprite.AIIntegration.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.Purchasing.SecurityCore">
-      <HintPath>/Users/alexey/Downloads/ShootEmUp (Dirty)/Library/ScriptAssemblies/UnityEngine.Purchasing.SecurityCore.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Rider.Editor">
-      <HintPath>/Users/alexey/Downloads/ShootEmUp (Dirty)/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Services.Core.Analytics">
-      <HintPath>/Users/alexey/Downloads/ShootEmUp (Dirty)/Library/ScriptAssemblies/Unity.Services.Core.Analytics.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.AI.Navigation.Editor.ConversionSystem">
-      <HintPath>/Users/alexey/Downloads/ShootEmUp (Dirty)/Library/ScriptAssemblies/Unity.AI.Navigation.Editor.ConversionSystem.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.UI">
       <HintPath>/Users/alexey/Downloads/ShootEmUp (Dirty)/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
@@ -938,6 +953,22 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="Zenject-Editor.csproj">
+      <Project>{f3a1d040-f72d-039c-3590-34d904c1abe4}</Project>
+      <Name>Zenject-Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="Zenject.csproj">
+      <Project>{5f420f57-6ecc-0166-19b0-763a46922576}</Project>
+      <Name>Zenject</Name>
+    </ProjectReference>
+    <ProjectReference Include="Zenject-ReflectionBaking-Editor.csproj">
+      <Project>{7248d7a0-7c9c-f1d8-0e2b-dd2164983ded}</Project>
+      <Name>Zenject-ReflectionBaking-Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="Zenject-PoolMonitor-Editor.csproj">
+      <Project>{8caaffc1-a9b8-485f-b963-9c7d37a581de}</Project>
+      <Name>Zenject-PoolMonitor-Editor</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.

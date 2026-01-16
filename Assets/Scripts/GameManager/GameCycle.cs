@@ -82,6 +82,7 @@ namespace ShootEmUp
                 }
                 currentGameStatus = GameStatus.pause;
                 OnGameStarted?.Invoke();
+                Time.timeScale = 0;
             }
             else if (currentGameStatus == GameStatus.pause)
             {
@@ -95,6 +96,7 @@ namespace ShootEmUp
                 }
                 currentGameStatus = GameStatus.start;
                 OnGameStarted?.Invoke();
+                Time.timeScale = 1;
             }
             else
             {

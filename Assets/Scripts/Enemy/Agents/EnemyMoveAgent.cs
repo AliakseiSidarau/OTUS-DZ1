@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace ShootEmUp
@@ -12,11 +13,12 @@ namespace ShootEmUp
         
         [SerializeField] private Rigidbody2D _enemyRB;
         [SerializeField] private float _enemySpeed;
+        
+        private GameCycle.GameStatus _gameStatus;
 
         private Vector2 destination;
 
         private bool isReached;
-        private bool _isGameStarted = false;
 
         public void SetDestination(Vector2 endPoint)
         {
@@ -29,10 +31,9 @@ namespace ShootEmUp
             var nextPosition = _enemyRB.position + vector * _enemySpeed;
             _enemyRB.MovePosition(nextPosition);
         }
-
-        private void FixedUpdate()
+        
+        void FixedUpdate()
         {
-            if (_isGameStarted)
             {
                 if (this.isReached)
                 {

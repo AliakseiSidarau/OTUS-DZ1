@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace ShootEmUp
 {
-    public sealed class EnemyManager : MonoBehaviour
+    public sealed class EnemyManager : MonoBehaviour, IGameListenerStart
     {
         [SerializeField]
         private EnemyPool _enemyPool;
@@ -16,6 +16,11 @@ namespace ShootEmUp
         
         private readonly HashSet<GameObject> m_activeEnemies = new();
 
+        public void StartGame()
+        {
+            Debug.Log("EnemyManager coroutine started!");
+            StopCoroutine(Start());
+        }
         private IEnumerator Start()
         {
             while (true)

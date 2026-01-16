@@ -10,7 +10,8 @@ namespace ShootEmUp
         [SerializeField] private GameManager _gameManager;
         [SerializeField] private CharacterLiveCycle _characterLiveCycle;
         [SerializeField] private HUDController _hudController;
-        [SerializeField] private CountdownTimerController _countdownTimerController;
+        [SerializeField] private EnemyManager _enemyManager;
+        [SerializeField] private EnemyPool _enemyPool;
 
         private void Awake()
         {
@@ -19,7 +20,8 @@ namespace ShootEmUp
             _gameCycle.AddListener(_gameManager);
             _gameCycle.AddListener(_characterLiveCycle);
             _gameCycle.AddListener(_hudController);
-            _gameCycle.AddListener(_countdownTimerController);
+            _gameCycle.AddListener(_enemyManager);
+            _gameCycle.AddListener(_enemyPool);
         }
     }
 }

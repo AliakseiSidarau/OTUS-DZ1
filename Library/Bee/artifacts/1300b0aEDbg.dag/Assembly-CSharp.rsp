@@ -465,7 +465,6 @@
 "Assets/Scripts/Input/KeyboardInput.cs"
 "Assets/Scripts/Input/PlayerAttack.cs"
 "Assets/Scripts/Input/PlayerMovementController.cs"
-"Assets/Scripts/Level/CountdownTimerController.cs"
 "Assets/Scripts/Level/HUDController.cs"
 "Assets/Scripts/Level/LevelBackground.cs"
 "Assets/Scripts/Level/LevelBounds.cs"

@@ -48,10 +48,12 @@
   <ItemGroup>
     <Compile Include="Assets/Scripts/GameManager/GameManager.cs" />
     <Compile Include="Assets/Scripts/Bullets/BulletUtils.cs" />
+    <Compile Include="Assets/Homeworks/PresentationModel/Scripts/CharacterInfo.cs" />
     <Compile Include="Assets/Scripts/Level/LevelBackground.cs" />
     <Compile Include="Assets/Scripts/Character/CharacterHealth.cs" />
     <Compile Include="Assets/Scripts/Enemy/EnemyManager.cs" />
     <Compile Include="Assets/Scripts/Enemy/Agents/EnemyMoveAgent.cs" />
+    <Compile Include="Assets/Homeworks/PresentationModel/Scripts/PlayerLevel.cs" />
     <Compile Include="Assets/Scripts/Input/PlayerAttack.cs" />
     <Compile Include="Assets/Scripts/Enemy/EnemyPositions.cs" />
     <Compile Include="Assets/Scripts/Input/PlayerMovement.cs" />
@@ -66,8 +68,10 @@
     <Compile Include="Assets/Scripts/Character/CharacterLiveCycle.cs" />
     <Compile Include="Assets/Scripts/Bullets/BulletSystem.cs" />
     <Compile Include="Assets/Scripts/Common/PhysicsLayer.cs" />
+    <Compile Include="Assets/Homeworks/PresentationModel/Scripts/UserInfo.cs" />
     <Compile Include="Assets/Scripts/Common/Weapon.cs" />
     <Compile Include="Assets/Scripts/Enemy/Agents/Health.cs" />
+    <Compile Include="Assets/Homeworks/PresentationModel/Scripts/CharacterStat.cs" />
     <None Include="Assets/Resources/BillingMode.json" />
     <Reference Include="UnityEngine">
       <HintPath>/Applications/Unity/Hub/Editor/6000.2.14f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.dll</HintPath>

@@ -456,10 +456,10 @@
 "Assets/Scripts/Input/PlayerMovement.cs"
 "Assets/Scripts/Level/LevelBackground.cs"
 "Assets/Scripts/Level/LevelBounds.cs"
-"Assets/Scripts/PopUp/PlayerModel.cs"
-"Assets/Scripts/PopUp/PlayerPopupController.cs"
-"Assets/Scripts/PopUp/PlayerPopupPresenter.cs"
-"Assets/Scripts/PopUp/PlayerPopupView.cs"
+"Assets/Scripts/PopUp/Hero.cs"
+"Assets/Scripts/PopUp/HeroPopup.cs"
+"Assets/Scripts/PopUp/HeroPopupPresenter.cs"
+"Assets/Scripts/PopUp/HeroPopupView.cs"
 -langversion:9.0
 /deterministic
 /optimize-

@@ -131,6 +131,7 @@ GameObject:
   - component: {fileID: 337026596}
   - component: {fileID: 337026595}
   - component: {fileID: 337026594}
+  - component: {fileID: 337026598}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -214,7 +215,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1800731682}
-  - {fileID: 751826546}
+  - {fileID: 1645072914}
   - {fileID: 597408252}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -223,6 +224,31 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &337026598
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 337026593}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5d5d164ece4489b88f0f547168e7238, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PopUp.HeroPopup
+  _viewPrefab: {fileID: 1645072915}
+  _hero:
+    name: '@JaneWizzard'
+    image: {fileID: 0}
+    level: 99
+    description: I'm the best of the best
+    moveSpeed: 10
+    intelligence: 30
+    stamina: 13
+    damage: 57
+    dexterety: 24
+    regeneration: 17
+  _buttonToShowPopup: {fileID: 597408253}
 --- !u!1 &498685050
 GameObject:
   m_ObjectHideFlags: 0
@@ -309,7 +335,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &597408252
 RectTransform:
   m_ObjectHideFlags: 0
@@ -325,9 +351,9 @@ RectTransform:
   - {fileID: 1617094898}
   m_Father: {fileID: 337026597}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchorMin: {x: 0.5, y: 0}
+  m_AnchorMax: {x: 0.5, y: 0}
+  m_AnchoredPosition: {x: 0, y: 50}
   m_SizeDelta: {x: 160, y: 60}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &597408253
@@ -412,13 +438,7 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 597408251}
   m_CullTransparentMesh: 1
---- !u!224 &751826546 stripped
-RectTransform:
-  m_CorrespondingSourceObject: {fileID: 4262149050630197626, guid: 70973e9061c5a433487f50b0a2178905,
-    type: 3}
-  m_PrefabInstance: {fileID: 1495129115}
-  m_PrefabAsset: {fileID: 0}
---- !u!1001 &1495129115
+--- !u!1001 &1131579358
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -434,7 +454,7 @@ PrefabInstance:
     - target: {fileID: 3266987813232043127, guid: 70973e9061c5a433487f50b0a2178905,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4262149050630197626, guid: 70973e9061c5a433487f50b0a2178905,
         type: 3}
@@ -627,7 +647,7 @@ Transform:
   m_GameObject: {fileID: 1502192415}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: -10}
+  m_LocalPosition: {x: 0, y: 1, z: -10.1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -770,6 +790,24 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1617094897}
   m_CullTransparentMesh: 1
+--- !u!224 &1645072914 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 4262149050630197626, guid: 70973e9061c5a433487f50b0a2178905,
+    type: 3}
+  m_PrefabInstance: {fileID: 1131579358}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1645072915 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3580108535611483978, guid: 70973e9061c5a433487f50b0a2178905,
+    type: 3}
+  m_PrefabInstance: {fileID: 1131579358}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9d36724faa14970afaed3ec26ee99e0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PopUp.HeroPopupView
 --- !u!1 &1800731681
 GameObject:
   m_ObjectHideFlags: 0

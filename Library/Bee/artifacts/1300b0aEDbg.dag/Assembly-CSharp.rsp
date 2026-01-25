@@ -434,10 +434,6 @@
 -analyzer:"/Applications/Unity/Hub/Editor/6000.2.14f1/Unity.app/Contents/Tools/Unity.SourceGenerators/Unity.Properties.SourceGenerator.dll"
 -analyzer:"/Applications/Unity/Hub/Editor/6000.2.14f1/Unity.app/Contents/Tools/Unity.SourceGenerators/Unity.SourceGenerators.dll"
 -analyzer:"/Applications/Unity/Hub/Editor/6000.2.14f1/Unity.app/Contents/Tools/Unity.SourceGenerators/Unity.UIToolkit.SourceGenerator.dll"
-"Assets/Homeworks/PresentationModel/Scripts/CharacterInfo.cs"
-"Assets/Homeworks/PresentationModel/Scripts/CharacterStat.cs"
-"Assets/Homeworks/PresentationModel/Scripts/PlayerLevel.cs"
-"Assets/Homeworks/PresentationModel/Scripts/UserInfo.cs"
 "Assets/Scripts/Bullets/Bullet.cs"
 "Assets/Scripts/Bullets/BulletConfig.cs"
 "Assets/Scripts/Bullets/BulletSystem.cs"
@@ -460,6 +456,10 @@
 "Assets/Scripts/Input/PlayerMovement.cs"
 "Assets/Scripts/Level/LevelBackground.cs"
 "Assets/Scripts/Level/LevelBounds.cs"
+"Assets/Scripts/PopUp/PlayerModel.cs"
+"Assets/Scripts/PopUp/PlayerPopupController.cs"
+"Assets/Scripts/PopUp/PlayerPopupPresenter.cs"
+"Assets/Scripts/PopUp/PlayerPopupView.cs"
 -langversion:9.0
 /deterministic
 /optimize-

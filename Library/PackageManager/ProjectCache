@@ -5,7 +5,7 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 639020296680000000
+      ticks: 639040892610000000
     m_Hash: 1292542333
   m_LockFileStatus:
     m_FilePath: /Users/alexey/Downloads/ShootEmUp (Dirty)/Packages/packages-lock.json
@@ -13,7 +13,7 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 639020296680000000
+      ticks: 639040892610000000
     m_Hash: 2570403198
 m_EmbeddedPackageManifests:
   m_ManifestsStatus: {}
@@ -394,9 +394,11 @@ m_ResolvedPackages:
     - 2.0.7
     - 2.0.8
     - 2.0.9
+    - 2.0.10
     compatible:
     - 2.0.9
-    recommended: 2.0.9
+    - 2.0.10
+    recommended: 2.0.10
     deprecated: []
   dependencies:
   - name: com.unity.modules.ai
@@ -730,9 +732,11 @@ m_ResolvedPackages:
     - 2.10.1
     - 2.10.2
     - 2.11.2
+    - 2.11.3
     compatible:
     - 2.10.2
     - 2.11.2
+    - 2.11.3
     recommended: 2.10.2
     deprecated: []
   dependencies: []
@@ -875,9 +879,11 @@ m_ResolvedPackages:
     - 3.0.36
     - 3.0.37
     - 3.0.38
+    - 3.0.39
     compatible:
     - 3.0.38
-    recommended: 3.0.38
+    - 3.0.39
+    recommended: 3.0.39
     deprecated:
     - 3.0.37
   dependencies:
@@ -1258,6 +1264,8 @@ m_ResolvedPackages:
     - 4.13.2
     - 4.14.0
     - 4.14.1
+    - 4.14.2
+    - 4.15.0-pre.1
     - 5.0.0-pre.1
     - 5.0.0-pre.3
     - 5.0.0-pre.4
@@ -1273,9 +1281,12 @@ m_ResolvedPackages:
     - 5.1.0
     - 5.1.1
     - 5.1.2
+    - 5.2.0-pre.1
     compatible:
     - 4.14.0
     - 4.14.1
+    - 4.14.2
+    - 4.15.0-pre.1
     - 5.0.0-pre.1
     - 5.0.0-pre.3
     - 5.0.0-pre.4
@@ -1291,6 +1302,7 @@ m_ResolvedPackages:
     - 5.1.0
     - 5.1.1
     - 5.1.2
+    - 5.2.0-pre.1
     recommended: 5.0.4
     deprecated: []
   dependencies:
@@ -4795,11 +4807,13 @@ m_ResolvedPackages:
     - 6.1.0
     - 6.1.1
     - 6.2.0
+    - 6.2.1
     compatible:
     - 6.1.0
     - 6.1.1
     - 6.2.0
-    recommended: 6.2.0
+    - 6.2.1
+    recommended: 6.2.1
     deprecated: []
   dependencies:
   - name: com.unity.ugui

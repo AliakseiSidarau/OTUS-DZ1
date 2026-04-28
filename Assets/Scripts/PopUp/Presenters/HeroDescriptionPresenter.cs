@@ -9,9 +9,9 @@ namespace PopUp
             _view = view;
         }
 
-        public void SetDescription(string description)
+        public void SetDescription(DescriptionData data)
         {
-            _view.SetData(description);
+            _view.SetData(data);
         }
     }
 }

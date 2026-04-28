@@ -9,20 +9,9 @@ namespace PopUp
             _view = view;
         }
 
-        public void SetStats(
-            string moveSpeedValue,
-            string staminaValue,
-            string dexterityValue,
-            string intelligenceValue,
-            string damageValue,
-            string regenerationValue)
+        public void SetStats(StatsData data)
         {
-            _view.SetData(moveSpeedValue,
-                staminaValue,
-                dexterityValue,
-                intelligenceValue,
-                damageValue,
-                regenerationValue);
+            _view.SetData(data);
         }
     }
 }

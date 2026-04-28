@@ -52,6 +52,8 @@
     <Compile Include="Assets/Scripts/Level/LevelBackground.cs" />
     <Compile Include="Assets/Scripts/PopUp/Views/HeroStatView.cs" />
     <Compile Include="Assets/Scripts/Character/CharacterHealth.cs" />
+    <Compile Include="Assets/Scripts/PopUp/Models/StatsData.cs" />
+    <Compile Include="Assets/Scripts/PopUp/Models/XpData.cs" />
     <Compile Include="Assets/Scripts/Enemy/EnemyManager.cs" />
     <Compile Include="Assets/Scripts/Enemy/Agents/EnemyMoveAgent.cs" />
     <Compile Include="Assets/Scripts/Input/PlayerAttack.cs" />
@@ -80,6 +82,8 @@
     <Compile Include="Assets/Scripts/Common/PhysicsLayer.cs" />
     <Compile Include="Assets/Scripts/Common/Weapon.cs" />
     <Compile Include="Assets/Scripts/Enemy/Agents/Health.cs" />
+    <Compile Include="Assets/Scripts/PopUp/Models/HeaderData.cs" />
+    <Compile Include="Assets/Scripts/PopUp/Models/DescriptionData.cs" />
     <Compile Include="Assets/Scripts/PopUp/Views/HeroXpBarView.cs" />
     <None Include="Assets/TextMesh Pro/Shaders/TMPro.cginc" />
     <None Include="Assets/TextMesh Pro/Shaders/TMP_SDF-Mobile Overlay.shader" />

@@ -1,3 +1,6 @@
+using System.Data;
+using System.Globalization;
+using PopUp;
 using TMPro;
 using UnityEngine;
 
@@ -10,21 +13,14 @@ public class HeroStatView : MonoBehaviour
     [SerializeField] private TextMeshProUGUI _damageValue;
     [SerializeField] private TextMeshProUGUI _regenerationValue;
 
-    public void SetData(
-        string moveSpeedValue,
-        string staminaValue,
-        string dexterityValue,
-        string intelligenceValue,
-        string damageValue,
-        string regenerationValue
-        )
+    public void SetData(StatsData data)
     {
-        _moveSpeedValue.text = moveSpeedValue;
-        _staminaValue.text = staminaValue;
-        _dexterityValue.text = dexterityValue;
-        _intelligenceValue.text = intelligenceValue;
-        _damageValue.text = damageValue;
-        _regenerationValue.text = regenerationValue;
+        _moveSpeedValue.text = data.MoveSpeed.ToString();
+        _staminaValue.text = data.Stamina.ToString();
+        _dexterityValue.text = data.Dexterity.ToString();
+        _intelligenceValue.text = data.Intelligence.ToString();
+        _damageValue.text = data.Damage.ToString();
+        _regenerationValue.text = data.Regeneration.ToString();
 
     }
 }

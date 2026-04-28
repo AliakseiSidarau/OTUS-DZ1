@@ -7,13 +7,14 @@ namespace PopUp
     {
         public string name = "@JaneWizzard";
         public Sprite image;
-        public string level = "99";
+        public int level = 99;
         public string description = "I'm the best of the best";
-        public string moveSpeed = "10";
-        public string intelligence = "30";
-        public string stamina = "13";
-        public string damage = "57";
-        public string dexterety = "24";
-        public string regeneration = "17";
+        public float moveSpeed = 10;
+        public float intelligence = 30;
+        public float stamina = 13;
+        public float damage = 57;
+        public float dexterity = 24;
+        public float regeneration = 17;
+        public Sprite xpImage;
     }
 }

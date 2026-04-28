@@ -17,17 +17,24 @@ namespace PopUp
         {
             var model = new HeroViewModel
             {
-                Name = _hero.name,
-                Description = _hero.description,
-                Image = _hero.image,
-                Level = _hero.level,
-
-                MoveSpeedValue = _hero.moveSpeed,
-                IntelligenceValue = _hero.intelligence,
-                StaminaValue = _hero.stamina,
-                DamageValue = _hero.damage,
-                DexterityValue = _hero.dexterety,
-                RegenerationValue = _hero.regeneration,
+               Header = new HeaderData(
+                   _hero.name,
+                   _hero.image,
+                   _hero.level),
+               
+               Description = new DescriptionData(
+                   _hero.description),
+               
+               Stats = new StatsData(
+                   _hero.moveSpeed,
+                   _hero.intelligence,
+                   _hero.stamina,
+                   _hero.damage, 
+                   _hero.dexterity,
+                   _hero.regeneration
+                   ),
+               
+               Xp = new XpData(_hero.xpImage)
             };
 
             _view.SetData(model);

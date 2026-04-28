@@ -11,9 +11,9 @@ namespace PopUp
             _view = view;
         }
 
-        public void SetHeader(string header, Sprite icon, string level)
+        public void SetHeader(HeaderData data)
         {
-            _view.SetData(header, icon, level);
+            _view.SetData(data);
         }
     }
 }

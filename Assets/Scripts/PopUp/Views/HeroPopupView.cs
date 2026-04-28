@@ -20,17 +20,33 @@ namespace PopUp
 
         public void SetData(HeroViewModel model)
         {
-            _header.SetData(model.Name, model.Image, model.Level);
-            _description.SetData(model.Description);
+            SetHeader(model);
+            SetDescription(model);
+            SetStats(model);
+            SetXp(model);
+        }
 
-            _stats.SetData(
-                model.MoveSpeedValue,
-                model.IntelligenceValue,
-                model.StaminaValue,
-                model.DamageValue,
-                model.DexterityValue,
-                model.RegenerationValue
-            );
+        private void SetHeader(HeroViewModel model)
+        {
+            _header.SetData(model.Header);
+        }
+
+        private void SetDescription(HeroViewModel model)
+        {
+            _description.SetData(model.Description);
+        }
+
+        private void SetStats(HeroViewModel model)
+        {
+            _stats.SetData(model.Stats);
+        }
+
+        private void SetXp(HeroViewModel model)
+        {
+            if (_xpBar != null)
+            {
+                _xpBar.SetSprites(model.Xp);
+            }
         }
 
         public void Show() => gameObject.SetActive(true);

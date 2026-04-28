@@ -11,9 +11,9 @@ namespace PopUp
             _view = view;
         }
 
-        public void SetXpBar(Sprite xp_image)
+        public void SetXpBar(XpData data)
         {
-            _view.SetSprites(xp_image);
+            _view.SetSprites(data);
         }
     }
 }

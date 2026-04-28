@@ -263,15 +263,16 @@ MonoBehaviour:
   _viewPrefab: {fileID: 1645072915}
   _hero:
     name: '@JaneWizzard'
-    image: {fileID: 0}
+    image: {fileID: 21300000, guid: 7c0892898786946a98a1057c9873611a, type: 3}
     level: 99
     description: I'm the best of the best
     moveSpeed: 10
     intelligence: 30
     stamina: 13
     damage: 57
-    dexterety: 24
+    dexterity: 24
     regeneration: 17
+    xpImage: {fileID: 21300000, guid: ebca5e0b7178447bea6a7fe825585b0a, type: 3}
   _buttonToShowPopup: {fileID: 597408253}
   _closeButton: {fileID: 759614053}
 --- !u!114 &355391857 stripped
